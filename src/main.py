@@ -29,6 +29,9 @@ def main(args):
         else:
             raise error
 
+    if args.bot:
+        args.token = "Bot %s" % args.token
+
     updated_guilds = set()
     updated_users = set()
     updated_members = set()
